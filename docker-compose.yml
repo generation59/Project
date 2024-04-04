@@ -1,9 +1,20 @@
 version: '3'
 
-services:
+volumes:
+  nexus-data:
 
+services:
+ nexus:
+    build: ./nexus/
+    restart: always
+    volumes:
+      - "nexus-data:/sonatype-work"
+    ports:
+      - "8081:8081"
+      - "8085:8085"
  nginx:
-    build: ./Nginx/
+    build: ./nginx/
     ports:
      - 7000:80
-
+    depends_on:
+      - nexus
