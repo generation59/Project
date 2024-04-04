@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+
+ nginx:
+    build: ./Nginx/
+    ports:
+     - 7000:80
+
