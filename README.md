@@ -5,7 +5,7 @@
 
 1. Клонируем проект на компьютер по SSH.
     ```bash
-    [https://github.com/generation59/TestTask.git](https://github.com/generation59/Project.git)
+    https://github.com/generation59/Project.git
     ```
 2. Соберите Docker образ:
     ```bash
